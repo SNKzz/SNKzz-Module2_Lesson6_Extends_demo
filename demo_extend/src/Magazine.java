@@ -22,7 +22,14 @@ public class Magazine extends Document {
     }
 
     public void get_magazine() {
-        System.out.println("Book: " + super.get_id() + " - " + super.get_publisher() + " - "
-                + super.get_quantity_publishes() + " - " + this.number_publish + " - " + this.month_publish);
+        if (this.number_publish != 0) {
+            System.out.println("Magazine: \n- Id document: " + super.get_id() + "\n- Publisher: "
+                    + super.get_publisher() + "\n- Quantity publisher: "
+                    + super.get_quantity_publishes() + "\n- Number of publishing: " + this.number_publish
+                    + "\n- Month of publishing: " + this.month_publish + "\n");
+        } else {
+            System.out.println("=> Magazine has not been created !!");
+        }
+
     }
 }

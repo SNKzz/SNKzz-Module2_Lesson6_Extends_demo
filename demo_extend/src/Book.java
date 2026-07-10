@@ -18,7 +18,13 @@ public class Book extends Document {
     }
 
     public void get_book() {
-        System.out.println("Book: " + super.get_id() + " - " + super.get_publisher() + " - "
-                + super.get_quantity_publishes() + " - " + this.authorizer + " - " + this.quantity_pages);
+        if (authorizer == null || quantity_pages == 0) {
+            System.out.println("=> Book has not been created !!");
+        } else {
+            System.out.println("Book: \n- Id document: " + super.get_id() + "\n- Publisher: "
+                    + super.get_publisher() + "\n- Quantity publisher: "
+                    + super.get_quantity_publishes() + "\n- Authorizer: " + this.authorizer
+                    + "\n- Quantity of pages: " + this.quantity_pages + "\n");
+        }
     }
 }
